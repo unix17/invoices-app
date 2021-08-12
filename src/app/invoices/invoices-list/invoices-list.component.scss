@@ -1,0 +1,38 @@
+@import '../../../assets/styles/tools.scss';
+
+.invoices-list {
+
+  overflow-x: scroll;
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0 to-rem(12px);
+    width: 100%;
+    border: none;
+  }
+
+  td {
+    padding: to-rem(8px);
+
+    &:nth-child(3) {
+      font-weight: 600;
+    }
+  }
+
+  td {
+    text-align: left;
+    border: none;
+  }
+
+  th {
+    padding: 0 to-rem(8px);
+    text-align: left;
+    color: #6B778C;
+    background-color: white;
+  }
+
+  tr {
+    color: #363B45;
+    background: rgba(112, 112, 112, 0.05);
+  }
+}

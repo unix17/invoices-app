@@ -1,0 +1,70 @@
+@import '../../../assets/styles/tools.scss';
+@import '../../../assets/styles/mixins.scss';
+
+.invoice-form {
+  padding: list-to-rem(21px 0 0 24px);
+
+  &__form-groups {
+    display: flex;
+    gap: to-rem(115px);
+    flex-wrap: wrap;
+  }
+
+  &__form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: to-rem(24px);
+    gap: to-rem(100px);
+
+    label {
+      color: #6B778C;
+    }
+
+    input {
+      color: #172B4D;
+    }
+
+    .error {
+      border: to-rem(1px) solid rgb(247, 76, 76);
+      box-shadow: list-to-rem(0 0 4px) rgb(247, 76, 76);
+    }
+
+    &-amount {
+      display: flex;
+      border: 1px solid black;
+      width: 48%;
+
+      input {
+        border: none;
+        width: 100%;
+      }
+    }
+  }
+
+  &__form-action {
+    display: flex;
+    gap: to-rem(24px);
+    margin-top: to-rem(73px);
+
+    :nth-child(1) {
+      background-color: #005CB4;;
+      color: white;
+      @include button;
+
+      &:hover {
+       background-color: #04529b;
+      }
+    }
+
+    :nth-child(2) {
+      width: to-rem(192px);
+      background-color: #EDEDED;
+      color: #000000;
+      @include button;
+
+      &:hover {
+       background-color: #d4d4d4;
+      }
+    }
+  }
+}

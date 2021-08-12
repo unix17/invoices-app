@@ -1,0 +1,12 @@
+@import '../../../assets/styles/tools.scss';
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: to-rem(10px);
+  padding: list-to-rem(16px 24px 16px 28px);
+  border-bottom: to-rem(1px) solid #DFE1E5;
+  font-size: to-rem(24px);
+  font-weight: 600;
+}

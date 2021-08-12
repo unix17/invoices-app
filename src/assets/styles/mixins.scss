@@ -1,0 +1,8 @@
+@mixin button {
+  padding: list-to-rem(10px 39px);
+  font-weight: 700;
+  font-size: to-rem(14px);
+  border: none;
+  border-radius: to-rem(4px);
+  text-transform: uppercase;
+}

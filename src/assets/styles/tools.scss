@@ -1,0 +1,19 @@
+@use "sass:list";
+@import './varibles.scss';
+@function to-rem($number) {
+  @return $number / $global-font-size * 1rem;
+}
+
+@function list-to-rem($numberList) {
+  $new-list: ();
+  $non-alterables: 0, auto, none, inherit;
+
+  @each $number in $numberList {
+    @if list.index($non-alterables, $number) {
+      $new-list: append($new-list, $number);
+    } @else {
+      $new-list: append($new-list, to-rem($number));
+    }
+  }
+  @return $new-list;
+}

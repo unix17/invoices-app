@@ -1,0 +1,22 @@
+<div class="invoices-list">
+  <table>
+    <tr>
+      <th>Invoice id</th>
+      <th>Beneficiary</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Invoice #</th>
+      <th>PNR</th>
+      <th>PAX</th>
+    </tr>
+    <tr *ngFor="let invoice of invoices | InvoiceFilter: invoiceNum">
+      <td>{{invoice?.id}}</td>
+      <td>{{invoice?.beneficiary}}</td>
+      <td>{{invoice?.amount | currency}}</td>
+      <td>{{invoice?.date | date: 'MMM dd yyy'}}</td>
+      <td>{{invoice?.invoice_num}}</td>
+      <td>{{invoice?.pnr || '--'}}</td>
+      <td>{{invoice?.pax || '--'}}</td>
+    </tr>
+  </table>
+</div>

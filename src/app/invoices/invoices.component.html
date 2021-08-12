@@ -1,0 +1,13 @@
+<section class="invoices">
+  <section class="invoices__header">
+    <app-invoices-search (searchInvoice)="filterInvoices($event)"></app-invoices-search>
+    <button class="invoices__header__create-link" [routerLink]="newInvoiceId$ | async">create invoice</button>
+  </section>
+  <section class="invoices-list">
+    <app-invoices-list
+    *ngIf="(invoices$ | async) as invoices"
+    [invoices]="invoices"
+    [invoiceNum]="invoiceNum"></app-invoices-list>
+  </section>
+</section>
+

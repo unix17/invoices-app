@@ -1,0 +1,75 @@
+<form class="invoice-form" [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+  <section class="invoice-form__form-groups">
+  <section>
+    <section class="invoice-form__form-group">
+      <label for="beneficiary">Beneficiary</label>
+      <select
+        id="beneficiary"
+        formControlName="beneficiary_id"
+        [class.error]="invoiceFormValidators?.beneficiary_id">
+        <option
+          *ngFor="let beneficiary of beneficiaries"
+          [value]="beneficiary?.id">
+          {{beneficiary?.name}}
+        </option>
+      </select>
+    </section>
+
+    <section class="invoice-form__form-group">
+      <label for="amount">Amount</label>
+      <div
+        class="invoice-form__form-group-amount"
+        [class.error]="invoiceFormValidators?.amount">
+        $
+        <input
+        id="amount"
+        type="number"
+        formControlName="amount">
+      </div>
+    </section>
+
+    <section class="invoice-form__form-group">
+      <label for="pnr">PNR</label>
+      <input
+        id="pnr"
+        type="text"
+        formControlName="pnr">
+    </section>
+
+    <section class="invoice-form__form-group">
+      <label for="pax">PAX</label>
+      <input
+        type="text"
+        id="pax"
+        formControlName="pax">
+    </section>
+
+  </section>
+
+
+  <section>
+    <section class="invoice-form__form-group">
+      <label for="date">Date</label>
+      <input
+        id="date"
+        type="date"
+        formControlName="date"
+        data-date-format="mmm/dd/yyyy"
+        [class.error]="invoiceFormValidators?.date">
+    </section>
+
+    <section class="invoice-form__form-group">
+      <label for="invoice">Beneficiary Invoice #</label>
+      <input
+        id="invoice"
+        type="text"
+        formControlName="invoice_num"
+        [class.error]="invoiceFormValidators?.invoice_num">
+    </section>
+  </section>
+</section>
+  <section class="invoice-form__form-action">
+    <button type="submit">create invoice</button>
+    <button type="button" routerLink="">cancel</button>
+  </section>
+</form>

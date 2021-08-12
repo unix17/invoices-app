@@ -1,0 +1,28 @@
+@import '../../../assets/styles/tools.scss';
+
+.invoices-search {
+  background-color: #FAFBFC;
+  width: to-rem(296px);
+  height: to-rem(32px);
+  border: to-rem(1px) solid #DFE1E5;
+  border-radius: to-rem(4px);
+  display: flex;
+  align-items: center;
+  padding: list-to-rem(6px 8px);
+
+  input {
+    width: 90%;
+    height: 100%;
+    border: none;
+    background-color: #FAFBFC;
+
+    ::placeholder {
+      color: #7A869A;
+      font-size: to-rem(14px);
+    }
+  }
+
+  fa-icon {
+    color: #7A869A;
+  }
+}

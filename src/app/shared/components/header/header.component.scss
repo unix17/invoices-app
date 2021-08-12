@@ -1,0 +1,10 @@
+@import 'src/assets/styles/tools.scss';
+
+header {
+  background-color: #363B45;
+  height: to-rem(40px);
+  display: flex;
+  align-items: center;
+  padding: list-to-rem(10px 24px);
+  color: white;
+}

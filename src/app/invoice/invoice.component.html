@@ -1,0 +1,5 @@
+<app-invoice-header></app-invoice-header>
+<app-invoice-form
+  (submitInvoiceForm)="creareInvoice($event)"
+  [beneficiaries]="beneficiaries$ | async"
+></app-invoice-form>
